@@ -2,7 +2,7 @@
 
 Paintable GUI component for Unity
 
-
+![DrawUI-SampleScene-PC_-Mac-_-Linux-Standalone-Unity-2019 3 5f1-_DX11_-2021-01-26-23-41-50_Trim(1)](https://user-images.githubusercontent.com/26675945/105862516-3133a980-6033-11eb-8579-3544ce320d7d.gif)
 
 ### How to use
 
@@ -24,10 +24,7 @@ Paintable GUI component for Unity
 | resetOnTouchDown | bool  | clear canvas when touch down |
 
 
-
-### Other
-
-##### Event Listener
+### Event Listener
 
 You can register event listener if you want to do something when DrawImage component is touched. 
 
@@ -38,7 +35,7 @@ You can register event listener if you want to do something when DrawImage compo
 ```c#
 void OnStart()
 {
-	var drawImage = GetComponent<KanaStudio.DrawImage>()
+    var drawImage = GetComponent<KanaStudio.DrawImage>()
     drawImage.OnDrag += OnDrag;
 }
 
@@ -46,8 +43,8 @@ void OnStart()
 // Lower right of (Vector2Int)position is (0,0)
 void OnDrag(Vector2Int position)
 {
-	// Note that position is screen coordinate
-    // if you want position on image,you can use ScreenToImagePosition method to convert position
+    // Note that position is screen coordinate
+    // if you want position on image,you can use DrawImage.ScreenToImagePosition method to convert position
     Debug.Log("(((('ω'))))");
 }
 ```
